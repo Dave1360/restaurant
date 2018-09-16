@@ -1,0 +1,70 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="205.6" height="180.73" viewBox="0 0 205.6 180.73">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-5 {
+        font-size: 25px;
+        font-family: MyriadPro-Regular, Myriad Pro;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <g>
+    <path d="M742.11,42.34A91.6,91.6,0,0,0,736.49,32c-7.28,3.37-17,5.45-27.69,5.45S688.4,35.34,681.12,32a90,90,0,0,0-5.62,10.37C682.88,47.58,695,51,708.8,51S734.73,47.58,742.11,42.34Z" transform="translate(-607.99 -12.5)"/>
+    <path d="M745,49.08c-.44-1.14-.9-2.25-1.36-3.35-7.16,5.87-20,9.81-34.82,9.81S681.15,51.6,674,45.73c-.46,1.1-.92,2.21-1.36,3.35,6.79,6.53,20.44,11,36.17,11S738.19,55.61,745,49.08Z" transform="translate(-607.99 -12.5)"/>
+    <path d="M746.2,52.34c-6.28,7.21-20.65,12.26-37.4,12.26s-31.11-5-37.39-12.26A181.32,181.32,0,0,0,662,98.59h93.69A181.32,181.32,0,0,0,746.2,52.34Z" transform="translate(-607.99 -12.5)"/>
+    <path d="M708.8,32.89a69.92,69.92,0,0,0,25.3-4.42c-7.33-10.11-16-16-25.3-16s-18,5.86-25.29,16A69.9,69.9,0,0,0,708.8,32.89Z" transform="translate(-607.99 -12.5)"/>
+  </g>
+  <circle class="cls-1" cx="75.05" cy="26.62" r="2.27"/>
+  <circle class="cls-1" cx="81.42" cy="29.31" r="2.27"/>
+  <circle class="cls-1" cx="87.93" cy="31.5" r="2.27"/>
+  <circle class="cls-1" cx="94.59" cy="33.06" r="2.27"/>
+  <circle class="cls-1" cx="101.88" cy="33.63" r="2.27"/>
+  <circle class="cls-1" cx="109.24" cy="32.5" r="2.27"/>
+  <circle class="cls-1" cx="115.47" cy="30.73" r="2.27"/>
+  <circle class="cls-1" cx="121.49" cy="28.67" r="2.27"/>
+  <circle class="cls-1" cx="127.08" cy="26.2" r="2.27"/>
+  <path d="M764.69,86.13V98.59c19.94-2.52,35-7,40.78-12.46Z" transform="translate(-607.99 -12.5)"/>
+  <path d="M654.24,86.13V98.59c-19.94-2.52-35-7-40.78-12.46Z" transform="translate(-607.99 -12.5)"/>
+  <path d="M787,104.25H634.58c-14.63,0-26.59-8.54-26.59-19V99.72c0,15,17.14,27.18,38.1,27.18H775.48c21,0,38.1-12.23,38.1-27.18V85.28C813.58,95.71,801.62,104.25,787,104.25Z" transform="translate(-607.99 -12.5)"/>
+  <path class="cls-2" d="M756.41,192.23A38.47,38.47,0,0,0,761.67,173c0-25.65-26.12-46.44-58.34-46.44S645,147.32,645,173a38.47,38.47,0,0,0,5.26,19.26Z" transform="translate(-607.99 -12.5)"/>
+  <ellipse class="cls-3" cx="72.69" cy="129.75" rx="9.06" ry="9.49"/>
+  <ellipse class="cls-4" cx="62.77" cy="135.98" rx="9.06" ry="9.49"/>
+  <ellipse class="cls-3" cx="54.09" cy="167.98" rx="9.06" ry="9.49"/>
+  <ellipse class="cls-3" cx="53.22" cy="154.39" rx="9.06" ry="9.49"/>
+  <ellipse class="cls-4" cx="57.58" cy="144.1" rx="9.06" ry="9.49"/>
+  <path class="cls-2" d="M771.14,192.23A38.56,38.56,0,0,0,776.39,173c0-25.65-26.12-46.44-58.34-46.44S659.72,147.32,659.72,173A38.56,38.56,0,0,0,665,192.23Z" transform="translate(-607.99 -12.5)"/>
+  <ellipse cx="80.14" cy="134.8" rx="2.69" ry="2.55"/>
+  <ellipse cx="74.48" cy="147.45" rx="2.69" ry="2.55"/>
+  <ellipse cx="77.88" cy="166.14" rx="2.69" ry="2.55"/>
+  <ellipse cx="100.53" cy="128.95" rx="2.69" ry="2.55"/>
+  <ellipse cx="101.85" cy="149.52" rx="2.69" ry="2.55"/>
+  <ellipse cx="98.64" cy="165.38" rx="2.69" ry="2.55"/>
+  <ellipse cx="121.3" cy="133.1" rx="2.69" ry="2.55"/>
+  <ellipse cx="123.38" cy="152.92" rx="2.69" ry="2.55"/>
+  <ellipse cx="126.02" cy="169.16" rx="2.69" ry="2.55"/>
+  <ellipse cx="148.11" cy="166.52" rx="2.69" ry="2.55"/>
+  <ellipse cx="145.46" cy="152.92" rx="2.69" ry="2.55"/>
+  <ellipse cx="141.12" cy="138.57" rx="2.69" ry="2.55"/>
+  <text class="cls-5" transform="translate(50.06 111.05)">La <tspan class="cls-6" x="29.15" y="0">F</tspan><tspan x="40.2" y="0">amilia</tspan></text>
+</svg>

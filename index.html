@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>La Familia</title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+            padding: 10px;
+            font-size: 0.7em;
+        }
+
+        .adresse {
+            margin: auto;
+            color: grey;
+        }
+
+        .åbningstider {
+            margin: auto;
+            color: grey;
+        }
+
+        .logo {
+           display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+
+        .burger {
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            margin-left: 45vw;
+
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 37vw;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        nav {
+            max-height: 0px;
+            overflow: hidden;
+            color: gray;
+
+        }
+
+        nav.show {
+            max-height: 700px;
+        }
+
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        @media screen and (min-width:768px) {
+            .burger {
+                display: none;
+            }
+            nav {
+                max-height: 200px;
+            }
+            li {
+                display: inline-block;
+            }
+            header {
+                font-size: 1.2em;
+            }
+
+            .data-container {
+                padding-left: 20%;
+                padding-right: 10%;
+                grid-gap: 5px;
+                grid-template-columns: repeat(3, 3fr);
+            }
+        }
+
+        .data-container {
+            margin: 0 auto;
+            display: grid;
+        }
+
+         .retter {
+            max-width: 400px;
+            border-radius: 10px;
+            }
+        article img {
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        article:nth-child(odd) {
+            background: green;
+        }
+        article:nth-child(even) {
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="adresse">Bogholder Allé 65, 2720 Vanløse</div>
+        <div class="åbningstider">man. - lør. 17:00 - 22:30</div>
+
+    </header>
+
+
+        <img src="logo.svg" class="logo" alt="logo">
+
+        <button class="burger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        </button>
+        <nav>
+            <ul>
+                <li class="menu-item" data-kategori="forretter">Forretter</li>
+                <li class="menu-item" data-kategori="hovedretter">Hovedretter</li>
+                <li class="menu-item" data-kategori="desserter">Desserter</li>
+                <li class="menu-item" data-kategori="drikkevarer">Drikkevare</li>
+            </ul>
+        </nav>
+        <h1></h1>
+
+        <main class="container">
+            <section class="data-container"></section>
+        </main>
+        <template class="data-template">
+            <article class="retter">
+                <img src="" alt=""><br>
+                <h2></h2>
+                <span class="data-kortbeskrivelse"></span><br>
+                <br><span class="data-pris"></span>
+            </article>
+        </template>
+
+
+
+    <script>
+    let dest = document.querySelector(".data-container"),
+    retter,
+    madFilter = "menu";
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+        async function hentJson() {
+            let myJson = await fetch("menu.json");
+            retter = await myJson.json();
+            visRetter();
+        }
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+           knap.addEventListener("click", filtrering);
+        });
+
+        function filtrering() {
+            dest.textContent = "";
+            madFilter = this.getAttribute("data-kategori");
+            visRetter();
+        }
+
+        function visRetter() {
+            let temp = document.querySelector(".data-template");
+            document.querySelector("h1").textContent = madFilter;
+
+           retter.forEach(retter => {
+                if (retter.kategori == madFilter || madFilter == "menu") {
+                   let klon = temp.cloneNode(true).content;
+                    klon.querySelector("img").src = "small/" + retter.billede + "-sm.jpg";
+                   klon.querySelector(".data-kortbeskrivelse").textContent = retter.kortbeskrivelse;
+                   klon.querySelector(".data-pris").textContent = retter.pris;
+                   dest.appendChild(klon);
+               }
+            });
+        }
+
+
+        function onLoad() {
+
+        function toggleMenu() {
+            document.querySelector(".burger").classList.toggle("change");
+            document.querySelector("nav").classList.toggle("show");
+        }
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+        document.querySelector("ul").addEventListener("click", toggleMenu);
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        onLoad();
+    });
+</script>
+</body>
+
+</html>
