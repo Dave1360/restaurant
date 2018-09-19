@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>La Familia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         * {
@@ -33,11 +34,18 @@
         }
 
         .logo {
-           display: block;
+            display: block;
             margin-left: auto;
             margin-right: auto;
             margin-top: 3vw;
             margin-bottom: 3vw;
+            width: 50vw;
+        }
+
+
+        h1 {
+            margin-left: 5vw;
+            text-transform: capitalize;
         }
 
         .burger {
@@ -48,17 +56,21 @@
 
         }
 
-        ul {
-            list-style: none;
-            margin-left: 37vw;
+        .menu-kategori {
+            text-align: center;
             padding: 0;
+            margin-top: 40px;
+
         }
 
-        li {
-            padding: 5px;
+        .menu-item {
+            padding: 10px;
             cursor: pointer;
             text-transform: uppercase;
+            color: grey;
+            font-size: 0.7em;
         }
+
 
         .bar1,
         .bar2,
@@ -73,12 +85,23 @@
         nav {
             max-height: 0px;
             overflow: hidden;
-            color: gray;
 
+        }
+
+        nav a {
+            text-decoration: none;
+            color: grey;
+           padding: 5px;
         }
 
         nav.show {
             max-height: 700px;
+            transition: 0.9s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 40px;
         }
 
 
@@ -96,47 +119,224 @@
             transform: rotate(45deg) translate(-8px, -8px);
         }
 
+        .data-container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .retter {
+            padding: 23px;
+        }
+
+        .data-pris {
+            font-weight: bold;
+        }
+
+        h2.overskrifter {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .data-kortbeskrivelse {
+            font-size: 0.8em;
+        }
+
+        #om {
+            background-color: rgba(0, 128, 0, 0.65);
+            padding: 20px;
+        }
+
+        #om p {
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        #om h2 {
+            margin-left: 40px;
+        }
+
+        #kontakt {
+            margin: auto;
+            background-color: rgba(0, 128, 0, 0.65);
+            /*            background-color: #f3f6f6;*/
+        }
+
+        #kontakt h2 {
+            padding-left: 50px;
+            padding-top: 40px;
+        }
+
+        #kontakt p {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px
+        }
+
+        #modal {
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0vw;
+            width: 100vw;
+            height: 100vw;
+            position: fixed;
+            text-align: center;
+            /*display: none;*/
+            opacity: 0;
+            pointer-events: none;
+            transition: 1s;
+        }
+
+        #modal-content {
+            width: 70vw;
+            height: 70vw;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            border-radius: 20px;
+            padding-left: 3vw;
+            padding-right: 3vw;
+
+        }
+
+
+        #modal.vis {
+            /*display: block;*/
+            opacity: 1;
+            pointer-events: all;
+            transition: 0.5s;
+            padding-top: 20px
+        }
+
+
+        .modal-navn {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+
+        .modal-knap {
+            background-color: grey;
+            border: none;
+            border-radius: 5px;
+            color: white;
+
+        }
+
+        .modal-pris {
+            font-weight: bold;
+        }
+
+        .modal-kortbeskrivelse {
+            font-size: 0.9em;
+        }
+
+        .modal-billede {
+            width: 30vw;
+            height: 30vw;
+        }
+
+
+        @media screen and (min-width:401px) {
+            .data-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            #om p {
+                max-width: 300px;
+                margin: auto;
+            }
+
+            #om h2 {
+                max-width: 300px;
+                margin: auto;
+                padding: 15px;
+            }
+            #kontakt h2 {
+                padding-left: 29vw;
+            }
+        }
+
         @media screen and (min-width:768px) {
             .burger {
                 display: none;
             }
+
             nav {
                 max-height: 200px;
+                text-align: center;
+                font-size: 1.3em;
+                padding-bottom: 30px;
+
             }
-            li {
+
+            nav a:hover {
+                color: black;
+                font-size: 1.4em;
+            }
+
+            h2.overskrifter:hover {
+                text-decoration: underline;
+            }
+
+            .menu-kategori {
                 display: inline-block;
+                padding: 0;
+                margin-top: 40px;
+                margin-left: 11vw;
             }
+
+            .menu-item {
+                font-size: 1.2em;
+            }
+
+            a.menu-item:hover {
+                color: black;
+                font-size: 1.4em;
+            }
+
             header {
                 font-size: 1.2em;
             }
 
             .data-container {
-                padding-left: 20%;
-                padding-right: 10%;
+                padding-left: 10vw;
+                padding-right: 10vw;
                 grid-gap: 5px;
                 grid-template-columns: repeat(3, 3fr);
             }
-        }
 
-        .data-container {
-            margin: 0 auto;
-            display: grid;
-        }
-
-         .retter {
-            max-width: 400px;
-            border-radius: 10px;
+            .logo {
+                width: 15vw;
             }
-        article img {
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
+
+            h1 {
+                padding-left: 11.5vw;
+                text-transform: capitalize;
+            }
+
+            #om p {
+                max-width: 300px;
+                margin: auto;
+            }
+
+            #om h2 {
+                max-width: 300px;
+                margin: auto;
+                padding: 15px;
+            }
+
+            #modal-content {
+                width: 40vw;
+                height: 40vw;
+            }
+
+            #kontakt h2 {
+                padding-left: 40vw;
+            }
+
+               nav a {
+            padding: 26px
         }
 
-        article:nth-child(odd) {
-            background: green;
-        }
-        article:nth-child(even) {
-            background: red;
         }
     </style>
 
@@ -145,49 +345,89 @@
 <body>
 
     <header>
-        <div class="adresse">Bogholder Allé 65, 2720 Vanløse</div>
+        <div class="adresse">Skindergade 36, 1159 københavn</div>
         <div class="åbningstider">man. - lør. 17:00 - 22:30</div>
 
     </header>
 
-
+    <section id="logo_menu">
         <img src="logo.svg" class="logo" alt="logo">
 
         <button class="burger">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </button>
         <nav>
-            <ul>
-                <li class="menu-item" data-kategori="forretter">Forretter</li>
-                <li class="menu-item" data-kategori="hovedretter">Hovedretter</li>
-                <li class="menu-item" data-kategori="desserter">Desserter</li>
-                <li class="menu-item" data-kategori="drikkevarer">Drikkevare</li>
-            </ul>
+            <a href="#om" class="omos">Om os</a>
+            <a href="#menusection" class="menu">Menu</a>
+            <a href="#kontakt" class="info">Kontakt</a>
         </nav>
-        <h1></h1>
+    </section>
+    <section id="om">
+        <h2>Om La Familia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio doloribus, sequi quisquam magni, ab fuga odit rerum nihil recusandae sapiente, deleniti voluptate dolorum suscipit rem et porro facilis commodi amet?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sapiente doloremque facere eius hic dolores explicabo repudiandae minus, id iusto nobis, molestiae quam ratione enim fugit! Eos repellat, nostrum quibusdam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nulla architecto aliquam eveniet nostrum quisquam porro explicabo inventore eius placeat veniam voluptate, natus voluptatibus ad corporis, dolores, modi provident laboriosam.</p>
+    </section>
+
+    <!--                            MODAL VIEW STARTER                              -->
+    <section id="modal">
+        <!--Close knappen-->
+        <button class="modal-knap">Close</button>
+        <div id="modal-content">
+            <!-- Indholdet der skal være i vinduet  -->
+            <h2 class="modal-navn"></h2>
+            <img class="modal-billede" src="" alt=""><br>
+            <p class="modal-kortbeskrivelse"></p>
+            <span class="modal-pris"></span>
+        </div>
+    </section>
+    <!--                            MODAL VIEW SLUTTER                              -->
+    <section id="menusection">
+        <div class="menu-kategori">
+            <a class="menu-item" data-kategori="forretter">Forretter</a>
+            <a class="menu-item" data-kategori="hovedretter">Hovedretter</a>
+            <a class="menu-item" data-kategori="desserter">Desserter</a>
+            <a class="menu-item" data-kategori="drikkevarer">Drikkevarer</a>
+        </div>
 
         <main class="container">
             <section class="data-container"></section>
         </main>
         <template class="data-template">
             <article class="retter">
+                <h2 class="overskrifter"></h2>
                 <img src="" alt=""><br>
-                <h2></h2>
                 <span class="data-kortbeskrivelse"></span><br>
                 <br><span class="data-pris"></span>
             </article>
         </template>
+    </section>
 
+    <section id="kontakt">
+
+        <h2>Kontakt</h2>
+
+        <p><b>Åben man. - lør. 17:00 - 22:30</b></p>
+        <p><b>Tlf: xx-xx-xx-xx</b></p>
+        <p>Ring og bestil bord, især til fredage og lørdage, hvis du vil sikre dig et bord.</p>
+        <p>
+            I forbindelse med catering, større arrangementer, lukkede selskaber og børnefødselsdage, kan der aftales andre tidspunkter og udvalg af mad.</p>
+
+        <p><b>Skindergade 36, 1159 København</b></p>
+    </section>
 
 
     <script>
-    let dest = document.querySelector(".data-container"),
-    retter,
-    madFilter = "menu";
+        let modal = document.querySelector("#modal");
+
+        let dest = document.querySelector(".data-container"),
+            retter,
+            madFilter = "menu";
 
         document.addEventListener("DOMContentLoaded", hentJson);
+
         async function hentJson() {
             let myJson = await fetch("menu.json");
             retter = await myJson.json();
@@ -195,7 +435,7 @@
         }
 
         document.querySelectorAll(".menu-item").forEach(knap => {
-           knap.addEventListener("click", filtrering);
+            knap.addEventListener("click", filtrering);
         });
 
         function filtrering() {
@@ -206,35 +446,58 @@
 
         function visRetter() {
             let temp = document.querySelector(".data-template");
-            document.querySelector("h1").textContent = madFilter;
 
-           retter.forEach(retter => {
+
+            retter.forEach(retter => {
                 if (retter.kategori == madFilter || madFilter == "menu") {
-                   let klon = temp.cloneNode(true).content;
-                    klon.querySelector("img").src = "small/" + retter.billede + "-sm.jpg";
-                   klon.querySelector(".data-kortbeskrivelse").textContent = retter.kortbeskrivelse;
-                   klon.querySelector(".data-pris").textContent = retter.pris;
-                   dest.appendChild(klon);
-               }
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").textContent = retter.navn;
+                    klon.querySelector(".data-kortbeskrivelse").textContent = retter.kortbeskrivelse;
+                    klon.querySelector(".retter").addEventListener("click", () => {
+                        visModal(retter);
+                    });
+                    klon.querySelector(".data-pris").textContent = retter.pris + ",-";
+                    dest.appendChild(klon);
+                }
             });
         }
-
+        // functionen visModal
+        function visModal(retter) {
+            //Når der trykkes på en af retterne bliver classes "vis" sat på
+            modal.classList.add("vis");
+            //Rettens navn bliver skrevet i modal viewet
+            modal.querySelector(".modal-navn").textContent = retter.navn;
+            //Rettens billede og beskrivelse bliver skrevet i modal viwet
+            modal.querySelector(".modal-billede").alt = "Foto af" + retter.navn;
+            modal.querySelector(".modal-billede").src = "small/" + retter.billede + ".jpg";
+            //En kort beskrivelse af retten bliver skrevet i modal viewet
+            modal.querySelector(".modal-kortbeskrivelse").textContent = retter.kortbeskrivelse;
+            //Prisen af retten bliver skrevet i modal viwet
+            modal.querySelector(".modal-pris").textContent = retter.pris + ",-";
+            //Når der klikkes på knappen bliver funktionen skjulModal fuldført
+            modal.querySelector("button").addEventListener("click", skjulModal);
+        }
+        //Funktionen skjulModal som fjerner modal viwet
+        function skjulModal() {
+            modal.classList.remove("vis");
+        }
 
         function onLoad() {
 
-        function toggleMenu() {
-            document.querySelector(".burger").classList.toggle("change");
-            document.querySelector("nav").classList.toggle("show");
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector("nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("a").addEventListener("click", toggleMenu);
+
         }
-        document.querySelector(".burger").addEventListener("click", toggleMenu);
-        document.querySelector("ul").addEventListener("click", toggleMenu);
 
-    }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        onLoad();
-    });
-</script>
+    </script>
 </body>
 
 </html>
